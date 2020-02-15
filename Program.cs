@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Twitter_Console
+namespace TwitterConsole
 {
     class Program
     {
         static void Main(string[] args)
         {
             string choice;
+            TweetManager tm = new TweetManager();
+
             do
             {
                 Console.WriteLine("------Main Menu-----");
@@ -20,36 +22,22 @@ namespace Twitter_Console
                 Console.WriteLine("3. Exit");
 
                 choice = Console.ReadLine();
-
                 Console.WriteLine($"You entered {choice}");
-
-                Console.ReadLine();
+                if (choice == "1")
+                {
+                    for (int i = 0; i < tm.TweetCounter(); i++)
+                    {
+                        Console.WriteLine($"Your tweet #{i+1} is '{tm.GetTweets()[i]}' ");
+                    }
+                }
+                if (choice == "2") {
+                    Console.Write("Enter your tweet: ");
+                    string tweet = Console.ReadLine();
+                    string msg = tm.PostTweet(tweet);
+                    Console.WriteLine(msg);
+                }
             }
             while (choice != "3");
-
-            Console.ReadLine();
-
-            //string[] tweets = new string[4];
-            //for(int i = 0; i < tweets.Length; i++)
-            //{
-
-            //    Console.Write("Enter tweet #{0}: ", i+1);
-            //    tweets[i] = Console.ReadLine();
-
-            //}
-
-            //Console.WriteLine("Tweet Posted Successfully");
-            //Console.WriteLine();
-            //Console.WriteLine("Your tweets are: ");
-            //for (int i = 0; i < tweets.Length; i++) {
-
-            //    if (tweets[i].Length > 140 )
-            //        Console.WriteLine("Tweet is longer than 140 characters");
-            //    else
-            //        Console.WriteLine("Your tweet #{0} is '{1}' ", i + 1, tweets[i]);
-            
-            //}
-            //Console.ReadLine();
         }
     }
 }
