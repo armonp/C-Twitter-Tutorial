@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterConsole", "TwitterConsole.csproj", "{3F13AA32-BA1B-4E0F-9DE2-307CA5919046}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetManager", "..\TweetManager\TweetManager.csproj", "{217CE5B9-4B61-4682-AC85-76B469A96EAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterForm", "..\TwitterForm\TwitterForm.csproj", "{DD761949-0ADE-418A-938E-385CB695B5AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3F13AA32-BA1B-4E0F-9DE2-307CA5919046}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F13AA32-BA1B-4E0F-9DE2-307CA5919046}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F13AA32-BA1B-4E0F-9DE2-307CA5919046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217CE5B9-4B61-4682-AC85-76B469A96EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217CE5B9-4B61-4682-AC85-76B469A96EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217CE5B9-4B61-4682-AC85-76B469A96EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217CE5B9-4B61-4682-AC85-76B469A96EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD761949-0ADE-418A-938E-385CB695B5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD761949-0ADE-418A-938E-385CB695B5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD761949-0ADE-418A-938E-385CB695B5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD761949-0ADE-418A-938E-385CB695B5AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

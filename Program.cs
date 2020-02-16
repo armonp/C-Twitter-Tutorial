@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TweetManager;
 
 namespace TwitterConsole
 {
@@ -11,7 +12,7 @@ namespace TwitterConsole
         static void Main(string[] args)
         {
             string choice;
-            TweetManager tm = new TweetManager();
+            TweetManagerFile tm = new TweetManagerFile();
 
             do
             {
@@ -19,7 +20,9 @@ namespace TwitterConsole
                 Console.WriteLine();
                 Console.WriteLine("1. View All Tweets");
                 Console.WriteLine("2. Post New Tweet");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("3. Search");
+                Console.WriteLine("4. Exit");
+
 
                 choice = Console.ReadLine();
                 Console.WriteLine($"You entered {choice}");
@@ -28,7 +31,7 @@ namespace TwitterConsole
                     for (int i = 0; i < tm.TweetCounter(); i++)
                     {
                         Console.WriteLine($"Your tweet #{i+1} is '{tm.GetTweets()[i]}' ");
-                    }
+                    }   
                 }
                 if (choice == "2") {
                     Console.Write("Enter your tweet: ");
@@ -36,8 +39,15 @@ namespace TwitterConsole
                     string msg = tm.PostTweet(tweet);
                     Console.WriteLine(msg);
                 }
+                if (choice == "3") {
+                    Console.WriteLine("Enter search term: ");
+                    string search = Console.ReadLine();
+                    List<string> results = tm.Search(search);
+                    Console.WriteLine("Found " + results.Count + " tweets.");
+                }
             }
-            while (choice != "3");
+            while (choice != "4");
+
         }
     }
 }
